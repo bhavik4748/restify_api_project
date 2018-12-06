@@ -52,7 +52,7 @@ module.exports = server => {
 
 
     //update customer
-    server.put('/customers:/id', async (req, res, next) => {
+    server.put('/customers/:id', async (req, res, next) => {
         //check for JSON
         if (!req.is('application/json')) {
             return next(new errors.InvalidContentError("Expects 'application/json'"));
